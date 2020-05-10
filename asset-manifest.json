@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/osmotically/react-cyworld/static/css/main.5f361e03.chunk.css",
+    "main.js": "/osmotically/react-cyworld/static/js/main.60af374f.chunk.js",
+    "main.js.map": "/osmotically/react-cyworld/static/js/main.60af374f.chunk.js.map",
+    "runtime-main.js": "/osmotically/react-cyworld/static/js/runtime-main.0cf4f3e2.js",
+    "runtime-main.js.map": "/osmotically/react-cyworld/static/js/runtime-main.0cf4f3e2.js.map",
+    "static/js/2.99a1c58c.chunk.js": "/osmotically/react-cyworld/static/js/2.99a1c58c.chunk.js",
+    "static/js/2.99a1c58c.chunk.js.map": "/osmotically/react-cyworld/static/js/2.99a1c58c.chunk.js.map",
+    "index.html": "/osmotically/react-cyworld/index.html",
+    "precache-manifest.07697b5203047263763d4037a78b18fe.js": "/osmotically/react-cyworld/precache-manifest.07697b5203047263763d4037a78b18fe.js",
+    "service-worker.js": "/osmotically/react-cyworld/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/osmotically/react-cyworld/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.99a1c58c.chunk.js.LICENSE.txt": "/osmotically/react-cyworld/static/js/2.99a1c58c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0cf4f3e2.js",
+    "static/js/2.99a1c58c.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.60af374f.chunk.js"
+  ]
+}
