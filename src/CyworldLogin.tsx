@@ -23,6 +23,7 @@ function CyworldLogin(props: Props) {
       autoLoad={false}
       size="small"
       fields="name,picture"
+      scope="public_profile,user_posts"
       callback={loginCallback}
     />
   );
