@@ -1,16 +1,20 @@
 import React, { useContext } from 'react';
 import { UserInfo } from './UserInfo';
+import { Alert } from 'antd';
 import CyworldMiniHomeLatestPost from './CyworldMiniHomeLatestPost';
 
 function CyworldMiniHome() {
     const userInfo = useContext(UserInfo);
     if (userInfo === null) {
-        return <div>Please Log In First!</div>
+        return <Alert
+            message="Sign In"
+            description="Please sign in to your information in your homepage."
+            type="error"
+            showIcon
+        />;
     }
     return (
         <>
-            <img src={String(userInfo?.picture?.data?.url)} alt="profile_image" />
-            {userInfo?.name}
             <CyworldMiniHomeLatestPost />
         </>
     );
