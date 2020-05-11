@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'antd';
 import FacebookLogin, { ReactFacebookLoginInfo } from 'react-facebook-login';
 
 type Props = {
@@ -13,7 +14,7 @@ function CyworldLogin(props: Props) {
 
   if (props.userInfo !== null) {
     return (
-      <button onClick={() => { props.setUserInfo(null) }}>Log Out</button>
+      <Button type="dashed" onClick={() => { props.setUserInfo(null) }}>Log Out</Button>
     );
   }
 
