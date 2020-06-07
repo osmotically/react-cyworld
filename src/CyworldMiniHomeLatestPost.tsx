@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { Card, List } from 'antd';
+import { Card, List, Tag } from 'antd';
 
-type FBPostInfo = { message: string, id: string };
+type PostInfo = { message: string, type: string, id: string };
 
 function CyworldMiniHomeLatestPost() {
   const [loading, setLoading] = useState<boolean>(true);
-  const [posts, setposts] = useState<Array<FBPostInfo>>([]);
+  const [posts, setposts] = useState<Array<PostInfo>>([]);
   useEffect(() => {
     setLoading(true);
     if (posts.length === 0) {
       FB.api(
         '/me/posts',
         'get',
-        { "fields": "message", "limit": "10" },
+        { "fields": "message, type", "limit": "10" },
         function (
           response: {
-            data: Array<FBPostInfo>,
+            data: Array<PostInfo>,
             page: { next: string, previous: string },
           },
         ) {
@@ -26,9 +26,21 @@ function CyworldMiniHomeLatestPost() {
     setLoading(false);
   }, [posts]);
 
-  const postMessages = posts.map(
-    post => String(post?.message),
-  );
+  // Put this in a seperate util js if needed
+  function getTagColorByPostType(postType: String): String {
+    switch (postType) {
+      case 'status':
+        return 'magenta';
+      case 'link':
+        return 'blue';
+      case 'photo':
+        return 'gold';
+      case 'video':
+        return 'purple';
+      default:
+        return 'cyan';
+    }
+  }
 
   return (
     <Card size="small" title="Updated news">
@@ -36,8 +48,13 @@ function CyworldMiniHomeLatestPost() {
         size="small"
         loading={loading}
         bordered
-        dataSource={postMessages}
-        renderItem={message => <List.Item>{message}</List.Item>}
+        dataSource={posts}
+        renderItem={post =>
+          <List.Item key={post?.id}>
+            <Tag color={String(getTagColorByPostType(post?.type))}>{post?.type}</Tag>
+            {post?.message}
+          </List.Item>
+        }
       />
     </Card>
   );
