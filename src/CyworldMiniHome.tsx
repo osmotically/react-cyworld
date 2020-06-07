@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { UserInfo } from './UserInfo';
 import { Alert } from 'antd';
+import CyworldMiniHomeIntro from './CyworldMiniHomeIntro';
 import CyworldMiniHomeLatestPost from './CyworldMiniHomeLatestPost';
 
 function CyworldMiniHome() {
@@ -15,6 +16,7 @@ function CyworldMiniHome() {
     }
     return (
         <>
+            <CyworldMiniHomeIntro />
             <CyworldMiniHomeLatestPost />
         </>
     );

@@ -31,7 +31,7 @@ function CyworldMiniHomeLatestPost() {
   );
 
   return (
-    <Card size="small" title="Latest Article(s)">
+    <Card size="small" title="Updated news">
       <List
         size="small"
         loading={loading}
