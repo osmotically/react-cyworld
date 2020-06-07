@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { ReactFacebookLoginInfo } from 'react-facebook-login';
-import './App.css';
 import { UserInfo } from './UserInfo';
 import { Avatar, Layout, Menu } from 'antd';
 import {
