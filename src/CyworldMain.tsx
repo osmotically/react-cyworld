@@ -29,6 +29,7 @@ function CyworldMain() {
       <CyworldLogin userInfo={userInfo} setUserInfo={setUserInfo} />
     );
   }
+  console.log(collapsed);
 
   return (
     <Layout style={{ minHeight: '100vh' }}>
@@ -38,7 +39,7 @@ function CyworldMain() {
             {userInfo === null ?
               <Avatar icon={<UserOutlined />} style={{ margin: '0 8px' }} /> :
               <Avatar src={String(userInfo?.picture?.data?.url)} style={{ margin: '0 8px' }} />}
-            {`${userInfo === null ? 'Please sign in' : userInfo?.name}`}
+            {!collapsed && `${userInfo === null ? 'Please sign in' : userInfo?.name}`}
           </div>
           <Menu.Item key="homepage" icon={<HomeOutlined />}>
             Mini Homepage
