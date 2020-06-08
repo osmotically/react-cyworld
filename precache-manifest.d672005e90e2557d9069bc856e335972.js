@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3a3ba05eac9df82ebf0f4ce242fa1d43",
+    "revision": "6e400922b7ebe44522ac1a0074466885",
     "url": "/react-cyworld/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-cyworld/static/css/2.35fcc229.chunk.css"
   },
   {
-    "revision": "cbe1f645b947b4c8e19b",
+    "revision": "fc3026599b482a91893b",
     "url": "/react-cyworld/static/css/main.5ecd60fb.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-cyworld/static/js/2.5294ed63.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "cbe1f645b947b4c8e19b",
-    "url": "/react-cyworld/static/js/main.759c0765.chunk.js"
+    "revision": "fc3026599b482a91893b",
+    "url": "/react-cyworld/static/js/main.08a4b527.chunk.js"
   },
   {
     "revision": "cf4ac4b671962de4e5a9",
