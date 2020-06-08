@@ -19,11 +19,12 @@ function CyworldMiniHome() {
         </>;
     }
     return (
-        <div style={{
-            backgroundSize: '40px 40px',
-            backgroundImage: 'linear-gradient(to right, grey 1px, transparent 1px), linear-gradient(to bottom, grey 1px, transparent 1px)',
-        }}>
-            {homeContent}
+        <div style={{ border: '1px solid', borderRadius: '8px', backgroundColor: '#4ab5d6', padding: '24px 24px 24px 24px' }}>
+            <div style={{ border: '1px dashed white', borderRadius: '16px', backgroundColor: '#4ab5d6', padding: '4px 4px 4px 4px' }}>
+                <div style={{ border: '1px solid', borderRadius: '8px', backgroundColor: 'white', padding: '30px 10px 20px 10px' }}>
+                    {homeContent}
+                </div>
+            </div>
         </div>
     );
 }
