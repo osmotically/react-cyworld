@@ -17,9 +17,9 @@ function CyworldMiniHome() {
         />;
     }
     return (
-        <div style={{ border: '1px solid', borderRadius: '8px', backgroundColor: '#4ab5d6', padding: '24px 24px 24px 24px' }}>
-            <div style={{ border: '1px dashed white', borderRadius: '16px', backgroundColor: '#4ab5d6', padding: '4px 4px 4px 4px' }}>
-                <div style={{ border: '1px solid', borderRadius: '8px', backgroundColor: 'white', padding: '20px 10px 20px 10px' }}>
+        <div style={{ border: '1px solid', borderRadius: '8px', backgroundColor: '#4ab5d6', padding: '24px' }}>
+            <div style={{ border: '1px dashed white', borderRadius: '16px', backgroundColor: '#4ab5d6', padding: '4px' }}>
+                <div style={{ border: '1px solid', borderRadius: '8px', backgroundColor: 'white', padding: '20px 10px' }}>
                     <Row gutter={16}>
                         <Col span={6}>
                             <CyworldMiniHomeToday />
@@ -30,10 +30,16 @@ function CyworldMiniHome() {
                     </Row>
                     <Row gutter={16}>
                         <Col span={6}>
-                            <CyworldMiniHomeIntro />
+                            <div style={{ border: '1px solid', borderRadius: '8px', backgroundColor: '#e6eeee', padding: '15px 10px' }}>
+                                <div style={{ border: '1px solid white', borderRadius: '8px', backgroundColor: 'white', padding: '10px 20px', minHeight: '700px' }}>
+                                    <CyworldMiniHomeIntro />
+                                </div>
+                            </div>
                         </Col>
                         <Col span={18}>
-                            <CyworldMiniHomeLatestPost />
+                            <div style={{ border: '1px solid', borderRadius: '8px', backgroundColor: 'white', padding: '10px 20px', minHeight: '732px' }}>
+                                <CyworldMiniHomeLatestPost />
+                            </div>
                         </Col>
                     </Row>
                 </div>
