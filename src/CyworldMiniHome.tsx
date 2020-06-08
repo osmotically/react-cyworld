@@ -6,19 +6,25 @@ import CyworldMiniHomeLatestPost from './CyworldMiniHomeLatestPost';
 
 function CyworldMiniHome() {
     const userInfo = useContext(UserInfo);
-    if (userInfo === null) {
-        return <Alert
-            message="Sign In"
-            description="Please sign in to your information in your homepage."
-            type="error"
-            showIcon
-        />;
-    }
-    return (
-        <>
+    let homeContent = <Alert
+        message="Sign In"
+        description="Please sign in to your information in your homepage."
+        type="error"
+        showIcon
+    />;
+    if (userInfo !== null) {
+        homeContent = <>
             <CyworldMiniHomeIntro />
             <CyworldMiniHomeLatestPost />
-        </>
+        </>;
+    }
+    return (
+        <div style={{
+            backgroundSize: '40px 40px',
+            backgroundImage: 'linear-gradient(to right, grey 1px, transparent 1px), linear-gradient(to bottom, grey 1px, transparent 1px)',
+        }}>
+            {homeContent}
+        </div>
     );
 }
 

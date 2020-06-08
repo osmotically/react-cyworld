@@ -23,7 +23,6 @@ function CyworldMiniHomeIntro() {
     }
     setLoading(false);
   }, [intro]);
-  console.log(intro);
 
   return (
     <Card size="small" title="Self Intro" loading={loading}>

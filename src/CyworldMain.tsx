@@ -28,7 +28,6 @@ function CyworldMain() {
       <CyworldLogin userInfo={userInfo} setUserInfo={setUserInfo} />
     );
   }
-  console.log(collapsed);
 
   return (
     <Layout style={{ minHeight: '100vh' }}>
@@ -49,7 +48,11 @@ function CyworldMain() {
         </Menu>
       </Sider>
       <Layout className="site-layout">
-        <Content style={{ margin: '0 16px' }}>
+        <Content style={{
+          backgroundColor: '#737373',
+          backgroundSize: '20px 20px',
+          backgroundImage: 'linear-gradient(to right, #8b9192 1px, transparent 1px), linear-gradient(to bottom, #8b9192 1px, transparent 1px)',
+        }}>
           <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
             {content}
           </div>
