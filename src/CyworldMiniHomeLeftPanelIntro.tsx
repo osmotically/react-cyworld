@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Card } from 'antd';
+import { Spin } from 'antd';
 
 type IntroInfo = { birthday: string, gender: string, email: string, name: string };
 
-function CyworldMiniHomeIntro() {
+function CyworldMiniHomeLeftPanelIntro() {
   const [loading, setLoading] = useState<boolean>(true);
   const [intro, setIntro] = useState<IntroInfo | null>(null);
   useEffect(() => {
@@ -16,7 +16,6 @@ function CyworldMiniHomeIntro() {
         function (
           response: IntroInfo,
         ) {
-          console.log(response);
           setIntro(response);
         }
       );
@@ -25,7 +24,8 @@ function CyworldMiniHomeIntro() {
   }, [intro]);
 
   return (
-    <Card size="small" title="Self Intro" loading={loading}>
+    loading ?
+      <Spin /> :
       <>
         <p style={{ marginBottom: '2px' }}>
           <span style={{ color: 'blue', fontWeight: 'bold', marginRight: '4px' }}>{intro?.name}</span>
@@ -33,8 +33,7 @@ function CyworldMiniHomeIntro() {
         </p>
         <p style={{ color: 'orange', fontSize: 'small' }}>{intro?.email}</p>
       </>
-    </Card>
   );
 }
 
-export default CyworldMiniHomeIntro;
+export default CyworldMiniHomeLeftPanelIntro;

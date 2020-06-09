@@ -6,7 +6,7 @@ function CyworldMiniHomeTitle() {
   return (
     <>
       <span style={{ color: 'orange', fontSize: '2em' }}>{title}</span>
-      <a style={{ color: 'grey', fontSize: '12px', position: 'absolute', right: '2%', bottom: '1%' }}>
+      <a href="/#" style={{ color: 'grey', fontSize: '12px', position: 'absolute', right: '2%', bottom: '1%' }}>
         https://osmotically.github.io/react-cyworld/
       </a>
     </>

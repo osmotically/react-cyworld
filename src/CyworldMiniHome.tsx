@@ -3,7 +3,7 @@ import { UserInfo } from './UserInfo';
 import { Alert, Col, Row } from 'antd';
 import CyworldMiniHomeTitle from './CyworldMiniHomeTitle';
 import CyworldMiniHomeToday from './CyworldMiniHomeToday';
-import CyworldMiniHomeIntro from './CyworldMiniHomeIntro';
+import CyworldMiniHomeLeftPanel from './CyworldMiniHomeLeftPanel';
 import CyworldMiniHomeLatestPost from './CyworldMiniHomeLatestPost';
 
 function CyworldMiniHome() {
@@ -32,7 +32,7 @@ function CyworldMiniHome() {
                         <Col span={6}>
                             <div style={{ border: '1px solid', borderRadius: '8px', backgroundColor: '#e6eeee', padding: '15px 10px' }}>
                                 <div style={{ border: '1px solid white', borderRadius: '8px', backgroundColor: 'white', padding: '10px 20px', minHeight: '700px' }}>
-                                    <CyworldMiniHomeIntro />
+                                    <CyworldMiniHomeLeftPanel />
                                 </div>
                             </div>
                         </Col>

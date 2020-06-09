@@ -25,6 +25,7 @@ function CyworldLogin(props: Props) {
       size="small"
       fields="name,picture"
       scope="public_profile,user_posts"
+      textButton="Continue with Facebook"
       callback={loginCallback}
     />
   );
