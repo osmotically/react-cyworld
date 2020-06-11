@@ -1,5 +1,4 @@
 import React from 'react';
-import { UserInfo } from './UserInfo';
 import CyworldMiniHomeLeftPanelPicture from './CyworldMiniHomeLeftPanelPicture';
 import CyworldMiniHomeLefPanelTodayIs from './CyworldMiniHomeLefPanelTodayIs';
 import CyworldMiniHomeLeftPanelIntro from './CyworldMiniHomeLeftPanelIntro';

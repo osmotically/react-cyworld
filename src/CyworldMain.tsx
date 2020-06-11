@@ -7,15 +7,18 @@ import {
   UserOutlined,
   LoginOutlined,
   LogoutOutlined,
+  WarningOutlined,
 } from '@ant-design/icons';
+import CyworldNavItem from './enum/CyworldNav';
 import CyworldMiniHome from './CyworldMiniHome';
 import CyworldLogin from './CyworldLogin';
 
 const { Content, Footer, Sider } = Layout;
 
 function CyworldMain() {
+  const params = new URLSearchParams(window.location.search);
   const [collapsed, setCollapsed] = useState<boolean>(false);
-  const [menu, setMenu] = useState<string>('homepage');
+  const [menu, setMenu] = useState<string>(params.get('menu') ?? CyworldNavItem.HOMEPAGE);
   const [userInfo, setUserInfo] = useState<ReactFacebookLoginInfo | null>(null);
 
   let content = (
@@ -23,26 +26,37 @@ function CyworldMain() {
       <CyworldMiniHome />
     </UserInfo.Provider>
   );
-  if (menu === 'login') {
+  if (menu === CyworldNavItem.LOGIN) {
     content = (
       <CyworldLogin userInfo={userInfo} setUserInfo={setUserInfo} />
+    );
+  } else if (menu === CyworldNavItem.PRIVACY) {
+    content = (
+      <>PRIVACY</>
     );
   }
 
   return (
     <Layout style={{ minHeight: '100vh' }}>
       <Sider collapsible collapsed={collapsed} onCollapse={setCollapsed}>
-        <Menu theme="dark" onClick={(e) => setMenu(e.key)} defaultSelectedKeys={['homepage']} mode="inline" >
+        <Menu theme="dark" onClick={(e) => {
+          setMenu(e.key);
+          params.set('menu', e.key);
+          window.history.replaceState({}, '', `${window.location.pathname}?${params}`);
+        }} defaultSelectedKeys={[menu]} mode="inline" >
           <div style={{ margin: '16px' }}>
             {userInfo === null ?
               <Avatar icon={<UserOutlined />} style={{ margin: '0 8px' }} /> :
               <Avatar src={String(userInfo?.picture?.data?.url)} style={{ margin: '0 8px' }} />}
             {!collapsed && `${userInfo === null ? 'Please sign in' : userInfo?.name}`}
           </div>
-          <Menu.Item key="homepage" icon={<HomeOutlined />}>
+          <Menu.Item key={CyworldNavItem.HOMEPAGE} icon={<HomeOutlined />}>
             Mini Homepage
           </Menu.Item>
-          <Menu.Item key="login" icon={userInfo === null ? <LoginOutlined /> : <LogoutOutlined />}>
+          <Menu.Item key={CyworldNavItem.PRIVACY} icon={<WarningOutlined />}>
+            Privacy Policy
+          </Menu.Item>
+          <Menu.Item key={CyworldNavItem.LOGIN} icon={userInfo === null ? <LoginOutlined /> : <LogoutOutlined />}>
             {`Sign ${userInfo === null ? 'In' : 'Out'}`}
           </Menu.Item>
         </Menu>
