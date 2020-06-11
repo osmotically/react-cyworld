@@ -1,6 +1,6 @@
 import React from 'react';
 import CyworldMiniHomeLeftPanelPicture from './CyworldMiniHomeLeftPanelPicture';
-import CyworldMiniHomeLefPanelTodayIs from './CyworldMiniHomeLefPanelTodayIs';
+import CyworldMiniHomeLeftPanelTodayIs from './CyworldMiniHomeLeftPanelTodayIs';
 import CyworldMiniHomeLeftPanelIntro from './CyworldMiniHomeLeftPanelIntro';
 import { Divider } from 'antd';
 
@@ -9,7 +9,7 @@ function CyworldMiniHomeLeftPanel() {
     <div style={{ textAlign: "center" }}>
       <CyworldMiniHomeLeftPanelPicture />
       <Divider style={{ marginTop: '12px', marginBottom: '4px' }} dashed />
-      <CyworldMiniHomeLefPanelTodayIs />
+      <CyworldMiniHomeLeftPanelTodayIs />
       <CyworldMiniHomeLeftPanelIntro />
     </div>
   );

@@ -12,6 +12,7 @@ import {
 import CyworldNavItem from './enum/CyworldNav';
 import CyworldMiniHome from './CyworldMiniHome';
 import CyworldLogin from './CyworldLogin';
+import CyworldPrivacy from './CyworldPrivacy';
 
 const { Content, Footer, Sider } = Layout;
 
@@ -32,7 +33,7 @@ function CyworldMain() {
     );
   } else if (menu === CyworldNavItem.PRIVACY) {
     content = (
-      <>PRIVACY</>
+      <CyworldPrivacy />
     );
   }
 

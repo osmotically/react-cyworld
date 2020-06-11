@@ -1,7 +1,7 @@
 import React from 'react';
 import { LikeOutlined } from '@ant-design/icons';
 
-function CyworldMiniHomeLefPanelTodayIs() {
+function CyworldMiniHomeLeftPanelTodayIs() {
   const todayIsMessage = '최고에요';
 
   return (
@@ -13,4 +13,4 @@ function CyworldMiniHomeLefPanelTodayIs() {
   );
 }
 
-export default CyworldMiniHomeLefPanelTodayIs;
+export default CyworldMiniHomeLeftPanelTodayIs;
