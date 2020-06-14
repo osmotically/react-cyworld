@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Spin } from 'antd';
 
+import styles from '../../Cyworld.module.css';
+
 type IntroInfo = { birthday: string, gender: string, email: string, name: string };
 
 function CyworldMiniHomeLeftPanelIntro() {
@@ -26,13 +28,16 @@ function CyworldMiniHomeLeftPanelIntro() {
   return (
     loading ?
       <Spin /> :
-      <>
+      <div style={{ textAlign: 'left' }}>
         <p style={{ marginBottom: '2px' }}>
-          <span style={{ color: 'blue', fontWeight: 'bold', marginRight: '4px' }}>{intro?.name}</span>
-          <span style={{ color: 'grey', fontSize: 'small' }}>{`(${intro?.gender === 'male' ? '♂' : '♀'}) ${intro?.birthday}`} </span>
+          <span style={{ color: '#30447a', fontWeight: 'bold', marginRight: '4px' }}>{intro?.name}</span>
+          <span className={styles.homeLeftPanelIntroGender}>
+            {intro?.gender === 'male' ? '♂' : '♀'}
+          </span>
+          <span style={{ fontSize: 'small' }}> {intro?.birthday}</span>
         </p>
-        <p style={{ color: 'orange', fontSize: 'small' }}>{intro?.email}</p>
-      </>
+        <p style={{ color: '#f86704', fontSize: 'small' }}>{intro?.email}</p>
+      </div>
   );
 }
 

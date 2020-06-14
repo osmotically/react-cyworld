@@ -10,7 +10,7 @@ import {
   WarningOutlined,
 } from '@ant-design/icons';
 import CyworldNavItem from './enum/CyworldNav';
-import CyworldMiniHome from './CyworldMiniHome';
+import CyworldMiniHome from './mini_home/CyworldMiniHome';
 import CyworldLogin from './CyworldLogin';
 import CyworldPrivacy from './CyworldPrivacy';
 

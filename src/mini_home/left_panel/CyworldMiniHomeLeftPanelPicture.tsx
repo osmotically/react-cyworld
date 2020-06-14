@@ -22,7 +22,7 @@ function CyworldMiniHomeLeftPanelPicture() {
   }, [pictureURI]);
 
   return (
-    loading ? <Spin /> : <img alt="profile_pic" src={pictureURI} />
+    loading ? <Spin /> : <img alt="profile_pic" src={pictureURI} width="250" height="250" />
   );
 }
 

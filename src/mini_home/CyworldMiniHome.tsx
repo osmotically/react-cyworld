@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
-import { UserInfo } from './UserInfo';
+import { UserInfo } from '../UserInfo';
 import { Alert, Col, Row } from 'antd';
 import CyworldMiniHomeTitle from './CyworldMiniHomeTitle';
 import CyworldMiniHomeToday from './CyworldMiniHomeToday';
-import CyworldMiniHomeLeftPanel from './CyworldMiniHomeLeftPanel';
+import CyworldMiniHomeLeftPanel from './left_panel/CyworldMiniHomeLeftPanel';
 import CyworldMiniHomeLatestPost from './CyworldMiniHomeLatestPost';
 
-import styles from './Cyworld.module.css';
+import styles from '../Cyworld.module.css';
 
 function CyworldMiniHome() {
     const userInfo = useContext(UserInfo);
