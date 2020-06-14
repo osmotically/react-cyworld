@@ -14,7 +14,11 @@ function CyworldPrivacy() {
       <ul>
         <li>
           React Cyworld is an open source website. You can check Typescript based ReactJS codebase on this
-          <a href="https://github.com/osmotically/react-cyworld/tree/master" target="_blank" style={{ marginLeft: '4px' }}>
+          <a
+            href="https://github.com/osmotically/react-cyworld/tree/master"
+            rel="noopener noreferrer"
+            target="_blank"
+            style={{ marginLeft: '4px' }}>
             github link
           </a>.
         </li>

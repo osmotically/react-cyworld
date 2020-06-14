@@ -14,6 +14,8 @@ import CyworldMiniHome from './CyworldMiniHome';
 import CyworldLogin from './CyworldLogin';
 import CyworldPrivacy from './CyworldPrivacy';
 
+import styles from './Cyworld.module.css';
+
 const { Content, Footer, Sider } = Layout;
 
 function CyworldMain() {
@@ -63,12 +65,8 @@ function CyworldMain() {
         </Menu>
       </Sider>
       <Layout className="site-layout">
-        <Content style={{
-          backgroundColor: '#737373',
-          backgroundSize: '20px 20px',
-          backgroundImage: 'linear-gradient(to right, #8b9192 1px, transparent 1px), linear-gradient(to bottom, #8b9192 1px, transparent 1px)',
-        }}>
-          <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
+        <Content className={styles.home}>
+          <div className="site-layout-background" style={{ padding: '24px', minHeight: '360px' }}>
             {content}
           </div>
         </Content>

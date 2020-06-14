@@ -1,0 +1,51 @@
+.home {
+  background-color: #737373;
+  background-size: 20px 20px;
+  background-image: 
+    linear-gradient(to right, #8b9192 1px, transparent 1px), 
+    linear-gradient(to bottom, #8b9192 1px, transparent 1px);
+}
+
+.homeBlue { 
+  border: 1px solid; 
+  border-radius: 8px; 
+  background-color: #4ab5d6; 
+  padding: 24px 
+}
+
+.homeDashWhite {
+  border: 1px dashed white;
+  border-radius: 16px;
+  background-color: #4ab5d6;
+  padding: 4px;
+}
+
+.homeInnerBorder { 
+  border: 1px solid;
+  border-radius: 8px; 
+  background-color: white;
+  padding: 20px 10px;
+}
+
+.homeLeftPanel {
+  border: 1px solid;
+  border-radius: 8px;
+  background-color: #e6eeee; 
+  padding: 15px 10px;
+}
+
+.homeLeftPanelInner {
+  border: 1px solid white;
+  border-radius: 8px; 
+  background-color: white; 
+  padding: 10px 20px; 
+  min-height: 700px;
+}
+
+.homeRightPanel {
+  border: 1px solid; 
+  border-radius: 8px; 
+  background-color: white; 
+  padding: 10px 20px;
+  min-height: 732px;
+}

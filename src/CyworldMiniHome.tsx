@@ -6,6 +6,8 @@ import CyworldMiniHomeToday from './CyworldMiniHomeToday';
 import CyworldMiniHomeLeftPanel from './CyworldMiniHomeLeftPanel';
 import CyworldMiniHomeLatestPost from './CyworldMiniHomeLatestPost';
 
+import styles from './Cyworld.module.css';
+
 function CyworldMiniHome() {
     const userInfo = useContext(UserInfo);
     if (userInfo === null) {
@@ -16,10 +18,11 @@ function CyworldMiniHome() {
             showIcon
         />;
     }
+
     return (
-        <div style={{ border: '1px solid', borderRadius: '8px', backgroundColor: '#4ab5d6', padding: '24px' }}>
-            <div style={{ border: '1px dashed white', borderRadius: '16px', backgroundColor: '#4ab5d6', padding: '4px' }}>
-                <div style={{ border: '1px solid', borderRadius: '8px', backgroundColor: 'white', padding: '20px 10px' }}>
+        <div className={styles.homeBlue}>
+            <div className={styles.homeDashWhite}>
+                <div className={styles.homeInnerBorder}>
                     <Row gutter={16}>
                         <Col span={6}>
                             <CyworldMiniHomeToday />
@@ -30,21 +33,21 @@ function CyworldMiniHome() {
                     </Row>
                     <Row gutter={16}>
                         <Col span={6}>
-                            <div style={{ border: '1px solid', borderRadius: '8px', backgroundColor: '#e6eeee', padding: '15px 10px' }}>
-                                <div style={{ border: '1px solid white', borderRadius: '8px', backgroundColor: 'white', padding: '10px 20px', minHeight: '700px' }}>
+                            <div className={styles.homeLeftPanel}>
+                                <div className={styles.homeLeftPanelInner}>
                                     <CyworldMiniHomeLeftPanel />
                                 </div>
                             </div>
                         </Col>
                         <Col span={18}>
-                            <div style={{ border: '1px solid', borderRadius: '8px', backgroundColor: 'white', padding: '10px 20px', minHeight: '732px' }}>
+                            <div className={styles.homeRightPanel}>
                                 <CyworldMiniHomeLatestPost />
                             </div>
                         </Col>
                     </Row>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
 
