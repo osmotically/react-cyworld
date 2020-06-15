@@ -3,6 +3,7 @@ import CyworldMiniHomeLeftPanelPicture from './CyworldMiniHomeLeftPanelPicture';
 import CyworldMiniHomeLeftPanelTodayIs from './CyworldMiniHomeLeftPanelTodayIs';
 import CyworldMiniHomeLeftPanelIntro from './CyworldMiniHomeLeftPanelIntro';
 import CyworldMiniHomeLeftPanelDescription from './CyworldMiniHomeLeftPanelDescription';
+import CyworldMiniHomeLeftPanelConnection from './CyworldMiniHomeLeftPanelConnection';
 
 import styles from '../../Cyworld.module.css';
 
@@ -15,6 +16,7 @@ function CyworldMiniHomeLeftPanel() {
       <CyworldMiniHomeLeftPanelDescription />
       <div className={styles.homeLeftPanelDivider} style={{ marginBottom: '24px' }} />
       <CyworldMiniHomeLeftPanelIntro />
+      <CyworldMiniHomeLeftPanelConnection />
     </div>
   );
 }
