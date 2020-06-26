@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Button } from 'antd';
 import FacebookLogin, { ReactFacebookLoginInfo } from 'react-facebook-login';
 
@@ -31,4 +31,4 @@ function CyworldLogin(props: Props) {
   );
 }
 
-export default CyworldLogin;
+export default memo(CyworldLogin);

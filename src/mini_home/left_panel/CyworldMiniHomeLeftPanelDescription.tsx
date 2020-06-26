@@ -17,10 +17,18 @@ function CyworldMiniHomeLeftPanelDescription() {
       <div style={{ minHeight: '200px' }}>
         {descriptions?.[0]?.description}
       </div>
-      <span style={{ color: '#f86704', marginRight: '2px' }}><CaretRightFilled /></span>
-      <a style={{ color: 'black', marginRight: '16px' }} href="#" onClick={() => setIsEditShown(true)}>Edit</a>
-      <span style={{ color: '#f86704', marginRight: '2px' }}><CaretRightFilled /></span>
-      <a style={{ color: 'black' }} href="#" onClick={() => setIsHistoryShown(true)}>History</a>
+      <span style={{ color: '#f86704', marginRight: '2px' }}>
+        <CaretRightFilled />
+      </span>
+      <button style={{ color: 'black', marginRight: '16px', border: 'none', background: 'transparent' }} onClick={() => setIsEditShown(true)}>
+        Edit
+      </button>
+      <span style={{ color: '#f86704', marginRight: '2px' }}>
+        <CaretRightFilled />
+      </span>
+      <button style={{ color: 'black', border: 'none', background: 'transparent' }} onClick={() => setIsHistoryShown(true)}>
+        History
+      </button>
       <span style={{ color: '#969696', position: 'absolute', right: '10%' }}>
         <CaretDownFilled />
         <CaretUpFilled />

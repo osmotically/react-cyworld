@@ -20,7 +20,7 @@ function CyworldMiniHomeLeftPanelConnection() {
           Club
         </Menu.Item>
       </Menu>
-      <Select defaultValue="">
+      <Select style={{ width: '100%' }} defaultValue="">
         <Select.Option value="">★일촌 파도타기</Select.Option>
         <Select.Option value="1">Friend 1</Select.Option>
         <Select.Option value="2">Friend 1</Select.Option>
