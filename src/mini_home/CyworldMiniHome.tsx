@@ -4,7 +4,7 @@ import { Alert, Col, Row } from 'antd';
 import CyworldMiniHomeTitle from './CyworldMiniHomeTitle';
 import CyworldMiniHomeToday from './CyworldMiniHomeToday';
 import CyworldMiniHomeLeftPanel from './left_panel/CyworldMiniHomeLeftPanel';
-import CyworldMiniHomeLatestPost from './CyworldMiniHomeLatestPost';
+import CyworldMiniHomeRightPanelPosts from './right_panel/CyworldMiniHomeRightPanelPosts';
 
 import styles from '../Cyworld.module.css';
 
@@ -41,7 +41,9 @@ function CyworldMiniHome() {
                         </Col>
                         <Col span={18}>
                             <div className={styles.homeRightPanel}>
-                                <CyworldMiniHomeLatestPost />
+                                <div className={styles.homeRightPanelInner}>
+                                    <CyworldMiniHomeRightPanelPosts />
+                                </div>
                             </div>
                         </Col>
                     </Row>

@@ -61,7 +61,41 @@
   border: 1px solid; 
   border-radius: 8px; 
   background-color: white; 
-  padding: 10px 20px;
-  min-height: 732px;
+  padding: 10px 30px;
+  height: 750px;
   box-shadow: 2px 2px 2px grey;
+}
+
+.homeRightPanelInner {
+  height: 730px;
+  overflow-y: scroll;
+}
+
+.homeRightPanelPostsTitle {
+  margin-right: 8px;
+  color: #229ed0;
+  font-weight: bold;
+  font-size: large;
+}
+
+.homeRightPanelPostsSubtitle {
+  color: grey;
+  font-size: small;
+}
+
+.homeRightPanelPostsDivider {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-top: 1px solid grey;
+}
+
+.homeRightPanelPostsList {
+  padding-left: 20px;
+  margin-bottom: 0px;
+  color: grey;
+}
+
+.homeRightPanelPostsListTag {
+  width: 45px;
+  text-align: center;
 }

@@ -9,12 +9,16 @@ type Props = {
 
 function CyworldLogin(props: Props) {
   const loginCallback = (userInfo: ReactFacebookLoginInfo) => {
+    console.log(userInfo);
     props.setUserInfo(userInfo);
   };
 
   if (props.userInfo !== null) {
     return (
-      <Button type="dashed" onClick={() => { props.setUserInfo(null) }}>Log Out</Button>
+      <Button type="dashed" onClick={() => {
+        props.setUserInfo(null);
+        FB.logout();
+      }}>Log Out</Button>
     );
   }
 
