@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Tag, Skeleton } from 'antd';
 
 import styles from '../../Cyworld.module.css';
+import getTagColorByPostType from '../../util/CyworldMiniUtil';
 
 type PostInfo = { message: string, type: string, id: string };
 
@@ -28,22 +29,6 @@ function CyworldMiniHomeRightPanelPosts() {
     setLoading(false);
   }, [posts]);
 
-  // Put this in a seperate util js if needed
-  function getTagColorByPostType(postType: String): String {
-    switch (postType) {
-      case 'status':
-        return 'magenta';
-      case 'link':
-        return 'blue';
-      case 'photo':
-        return 'gold';
-      case 'video':
-        return 'purple';
-      default:
-        return 'cyan';
-    }
-  }
-
   const postList = posts.map(
     post =>
       <li style={{ marginBottom: '5px' }}>
@@ -58,7 +43,7 @@ function CyworldMiniHomeRightPanelPosts() {
   );
 
   return (
-    <>
+    <div style={{ width: '50%' }}>
       <span className={styles.homeRightPanelPostsTitle}>Updated news</span>
       <span className={styles.homeRightPanelPostsSubtitle}>TODAY HISTORY</span>
       <div className={styles.homeRightPanelPostsDivider} />
@@ -68,7 +53,7 @@ function CyworldMiniHomeRightPanelPosts() {
           {postList}
         </ul>
       }
-    </>
+    </div>
   );
 }
 

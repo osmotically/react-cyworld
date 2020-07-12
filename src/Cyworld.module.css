@@ -67,6 +67,7 @@
 }
 
 .homeRightPanelInner {
+  display: flex;
   height: 730px;
   overflow-y: scroll;
 }
@@ -98,4 +99,21 @@
 .homeRightPanelPostsListTag {
   width: 45px;
   text-align: center;
+}
+
+.homeRightPanelTable {
+  width: 50%;
+  border: lightgrey 1px solid;
+  margin: 33px 15px 0px 10px;
+  border-collapse: collapse;
+}
+
+.homeRightPanelTableTd {
+  border: lightgrey 1px solid;
+  height: 30px;
+  padding-left: 5px;
+}
+
+.homeRightPanelTableFont {
+  color: darkblue;
 }

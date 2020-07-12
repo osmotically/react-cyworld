@@ -5,6 +5,7 @@ import CyworldMiniHomeTitle from './CyworldMiniHomeTitle';
 import CyworldMiniHomeToday from './CyworldMiniHomeToday';
 import CyworldMiniHomeLeftPanel from './left_panel/CyworldMiniHomeLeftPanel';
 import CyworldMiniHomeRightPanelPosts from './right_panel/CyworldMiniHomeRightPanelPosts';
+import CyworldMiniHomeRightPanelTable from './right_panel/CyworldMiniHomeRightPanelTable';
 
 import styles from '../Cyworld.module.css';
 
@@ -43,6 +44,7 @@ function CyworldMiniHome() {
                             <div className={styles.homeRightPanel}>
                                 <div className={styles.homeRightPanelInner}>
                                     <CyworldMiniHomeRightPanelPosts />
+                                    <CyworldMiniHomeRightPanelTable />
                                 </div>
                             </div>
                         </Col>
